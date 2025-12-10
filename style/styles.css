@@ -142,7 +142,7 @@ body {
 
 .skill-tag:hover {
     transform: translateY(-3px); /* Поднятие элемента при наведении */
-    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4); /* Увеличение тени при наведении */
+    box-shadow: 0 6px 20px rgba(1, 3, 5, 0.568); /* Увеличение тени при наведении */
 }
 
 /* ===== ОПЫТ РАБОТЫ ===== */
@@ -185,11 +185,13 @@ body {
     margin: 0; /* Убираем отступы */
 }
 
+/* ===== НОВОСТИ ===== */
+
 .news_card article {
 
     background: linear-gradient(135deg, #e6e6e6 0%, #757575c5 100%);
     padding: 55px;
-    border-radius: 5px;
+    border-radius: 15px;
     margin: 30px 0;
     border-left: 4px solid #161616e3;
 }
@@ -214,9 +216,9 @@ body {
     width: 300px;
     height: 200px;
     object-fit: cover;
-    border-radius: 2px;
+    border-radius: 15px;
     flex-shrink: 0;
-    border: 3px solid #161616e3; /* Синяя рамка вокруг фото */
+    border: 1px solid #3b3b3b80; /* Синяя рамка вокруг фото */
     box-shadow: 0 0 40px rgba(59, 59, 59, 0.582);
 }
 
@@ -228,6 +230,119 @@ body {
     font-weight: 500;
 }
 
+/* ===== ТОВАРЫ ===== */
+.product_title {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 32px; /* Размер шрифта заголовка */
+    color: #161616e3; /* Темно-синий цвет текста */
+    margin-bottom: 10px; /* Отступ снизу */
+    font-weight: 500; /* Легкое начертание шрифта */
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-auto-rows: minmax(600px, auto);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.product_item {
+    list-style: none;
+    background: linear-gradient(135deg, #161616e3 0%, #020202e3 100%);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(32, 30, 30, 0.788);
+    transition: transform 0.3s ease;
+}
+
+.product_item img{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(70, 70, 70, 0.788);
+}
+
+.product_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 30px rgba(32, 30, 30, 0.788);
+    transition: all 0.5s ease;
+}
+
+
+.product_item h2 {
+    font-size: 26px;
+    color: #f7f7f7;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.product_item p {
+    font-size: 20px;
+    color: #b8b8b8;
+    font-weight: 400;
+    margin: 5px 0;
+    margin-bottom: 15px;
+}
+
+.product_item span {
+    font-size: 20px;
+    color: #f7f7f7;
+    font-weight: 600;
+    margin: 5px 0;
+    margin-bottom: 15px;
+}
+
+/* ===== КОНТАКТЫ ===== */
+
+.contact_form{
+    background: linear-gradient(135deg, #303030e3 0%, #020202e3 100%); /* Светлый градиентный фон */
+    padding: 25px; /* Внутренние отступы */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* Легкая тень */
+    text-align: center;
+    border-radius: 5px; /* Скругленные углы */
+    margin: 30px 0; /* Вертикальные отступы */
+    border-bottom: 4px solid #161616e3; /* Синяя полоса слева */
+    font-size: 20px; /* Размер шрифта текста */
+    line-height: 1.8; /* Межстрочный интервал */
+    color: #d8d8d8ee;
+    width: 600px;
+    height: 70px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
+}
+.buttton_callme{
+    background: linear-gradient(to bottom, #000000c5 0%, #0f0f0faf 100%); /* Светлый градиентный фон */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2); /* Легкая тень */
+    border-radius: 5px; /* Скругленные углы */
+    font-size: 20px; /* Размер шрифта текста */
+    line-height: 1.8; /* Межстрочный интервал */
+    color: #d8d8d8ee;
+    font-weight: 600;
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    width: 250px;
+    height: 60px;
+    transition: all 0.3s ease;
+    outline: none; /* убирает синюю рамку при фокусе */
+}
+
+.buttton_callme:hover {
+    transform: scale(1.05); /* Увеличение при наведении */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.buttton_callme:active {
+    transform: translateY(-1px); /* Эффект нажатия */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
 
 /* ===== ФУТЕР ===== */
 .footer {
